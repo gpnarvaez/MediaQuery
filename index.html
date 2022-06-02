@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- importar css de estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Fuentes de Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/019307ff10.js" crossorigin="anonymous"></script>
+    <title>Ecommerce mobile</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <!-- ########## HEADER ##########  -->
+        <header>
+            <div class="header-bigcontainer">
+                <div class="header-container">
+                    <div class="nav-logo">
+                        <img src="assets/img/logo.png" alt="logo">
+                        <h1> Home-Stuff</h1>
+                    </div>
+                    <div class="nav-menu">
+                        <img src="assets/img/menu.png" alt="...">
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#">Inicio</a>
+                    <a href="#">Catálogo</a>
+                    <a href="#">Ofertas</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ########## GRILLA CONTENEDORA ##########  -->
+
+        <!-- ########## BUSCADOR ########## -->
+        <div id="search">
+            <div>
+                <p>Ordenar por:</p>
+                <select>
+                    <option value="precio">Precio</option>
+                    <option value="fecha">Fecha</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ########## PRODUCTOS ########## -->
+        <main>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_1.jpeg" alt="...">
+                </div>
+                <h3>Lavadora Frontal 9kg</h3>
+                <p>$189.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_2.jpeg" alt="...">
+                </div>
+                <h3>Refrigerador Bottom Mount</h3>
+                <p>$349.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_3.jpeg" alt="...">
+                </div>
+                <h3>Freidora de aire 15 lts</h3>
+                <p>$29.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_4.jpeg" alt="...">
+                </div>
+                <h3>Lavadora Superior 9kg</h3>
+                <p>$169.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_5.jpeg" alt="...">
+                </div>
+                <h3>Lavadora Frontal 11kg</h3>
+                <p>$389.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_6.jpeg" alt="...">
+                </div>
+                <h3>Cocina a gas 2 hornos</h3>
+                <p>$489.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_7.jpeg" alt="...">
+                </div>
+                <h3>Cocina a gas 1 horno</h3>
+                <p>$289.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_8.jpeg" alt="...">
+                </div>
+                <h3>Horno microondas 15 lts</h3>
+                <p>$89.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_5.jpeg" alt="...">
+                </div>
+                <h3>Lavadora Frontal 11kg</h3>
+                <p>$389.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_6.jpeg" alt="...">
+                </div>
+                <h3>Cocina a gas 2 hornos</h3>
+                <p>$489.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_7.jpeg" alt="...">
+                </div>
+                <h3>Cocina a gas 1 horno</h3>
+                <p>$289.900</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/img/lb_8.jpeg" alt="...">
+                </div>
+                <h3>Horno microondas 15 lts</h3>
+                <p>$89.900</p>
+                <button>Comprar</button>
+            </div>
+        </main>
+        <!-- ########## PAGINADOR ########## -->
+        <nav aria-label="pagination">
+            <div class="paginador-container">
+                <ul class="pagination">
+                    <li><a href=""><span aria-hidden="true">&laquo;</span><span class="visuallyhidden">previous set of
+                                pages</span></a></li>
+                    <li><a href=""><span class="visuallyhidden">page </span>1</a></li>
+                    <li><a href="" aria-current="page"><span class="visuallyhidden">page </span>2</a></li>
+                    <li><a href=""><span class="visuallyhidden">page </span>3</a></li>
+                    <li><a href=""><span class="visuallyhidden">page </span>4</a></li>
+                    <li><a href=""><span class="visuallyhidden">next set of pages</span><span
+                                aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ########## FOOTER ##########  -->
+        <footer>
+            <div>
+                <img src="assets/img/facebook.png" alt="...">
+                <img src="assets/img/instagram.png" alt="...">
+            </div>
+            <p>© 2022 TODOS LOS DERECHOS RESERVADOS</p>
+        </footer>
+        <!-- cierre div general -->
+    </div>
+</body>
+
+</html>

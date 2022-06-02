@@ -1,0 +1,324 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: lightgray;
+    /* height: 100vh; */
+}
+
+/* @@@@@@@@@@@@@@@@@@@ LAYOUT MOBILE @@@@@@@@@@@@@@@@@@@ */
+
+header {
+    display: grid;
+    grid-area: nav;
+    background-color: #4f3887;
+    padding: 5px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-logo img {
+    width: 40px;
+}
+
+.nav-logo h1 {
+    font-size: 18px;
+    white-space: pre;
+    color: #FFFFFF;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-menu img {
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "grid-buscador"
+        "grid-productos"
+        "grid-paginador"
+        "grid-footer";
+    /* gap: 5px 0px; */
+    height: 100%;
+    align-items: flex-start;
+    margin: 0px auto;
+    width: 100%;
+}
+
+#search {
+    background-color: #FFF;
+    grid-area: grid-buscador;
+    display: grid;
+    flex-direction: column;
+    height: fit-content;
+    border: none;
+    border-radius: 1px;
+    width: 100%;
+    align-items: center;
+    padding: 5px 0px 20px 0px;
+    justify-content: center;
+}
+
+#search p {
+    color: #4f3887;
+    text-align: center;
+    line-height: 5px;
+    font-size: 0.9rem;
+
+}
+
+#search select {
+    min-width: 180px;
+    background: #FFF;
+    border: 1px solid #4f3887;
+    color: rgb(75, 75, 75);
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* Contenedor principal */
+main {
+    grid-area: grid-productos;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    grid-gap: 30px 10px;
+    width: 100%;
+    justify-items: center;
+    padding-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    padding-top: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card-img img {
+    width: 60%;
+    transition: transform .2s;
+}
+
+.card-img img:hover {
+    width: 60%;
+    transform: scale(1.02);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card button {
+    padding: 10px 60px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    background-color: #3d2b66;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #4f3887;
+    border: none;
+}
+
+.card button:focus {
+    background-color: #BEC1BB;
+    border: none;
+}
+
+/* ########## PAGINADOR ########## */
+nav {
+    grid-area: grid-paginador;
+    display: grid;
+    height: fit-content;
+    padding: 5px 0px;
+    position: sticky;
+    background: #f2eef9;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+}
+
+.paginador-container {
+    display: flex;
+    justify-content: center;
+    border-top: none
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.pagination li {
+    margin: 0 1px;
+}
+
+.pagination a {
+    display: block;
+    padding: .5em 1em;
+    border: 1px solid #999;
+    border-radius: .2em;
+    text-decoration: none;
+    background: #FFFFFF;
+    font-size: 14px;
+}
+
+footer {
+    grid-area: grid-footer;
+    display: grid;
+    background-color: #3d2b66;
+    text-align: center;
+    padding: 15px 0px;
+    line-height: 0px;
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #FFF;
+    font-weight: 400;
+}
+
+footer img {
+    filter: invert(100%);
+    width: 24px;
+}
+
+/* @@@@@@@@@@@@@@@@@@@ FIN LAYOUT MOBILE @@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@ VISTA DESKTOP @@@@@@@@@@@@@@@@@@@ */
+@media (min-width:576px) {
+
+    /* ############# contenedor principal ############# */
+    .grid-container {
+        grid-template-areas:
+            "nav grid-buscador"
+            "nav grid-productos"
+            "nav grid-productos"
+            "grid-footer grid-productos"
+            "grid-footer grid-paginador";
+        grid-template-columns: 1fr 3.8fr;
+        grid-template-rows: 1fr;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* ############# barra lateral ############# */
+    .nav-menu img {
+        display: none;
+    }
+
+    header {
+        height: 100%;
+        min-width: 250px;
+        max-width: 100%;
+    }
+
+    /* ############# contenedor de la barra lateral con el menú de navegación ############# */
+    .header-bigcontainer {
+        line-height: 80px;
+    }
+
+    /* ############# logo+nombre empresa barra lateral ############# */
+    .header-container {
+        justify-content: center;
+    }
+
+    /* ############# propiedades del menú de navegación ############# */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #FFF;
+        font-size: 16px;
+    }
+
+    /* ############# footer ############# */
+    footer {
+        background-color: #3d2b66;
+        position: sticky;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    footer p {
+        color: #FFF;
+    }
+
+    footer img {
+        filter: invert(100%);
+        cursor: pointer;
+    }
+
+    /* ############# barra paginador ############# */
+    nav {
+        border-top: 1px solid #4f3887;
+        bottom: 0;
+        padding: 10px 0px;
+    }
+
+}
